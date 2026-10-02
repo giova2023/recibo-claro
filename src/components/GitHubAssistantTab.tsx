@@ -48,9 +48,31 @@ export const GitHubAssistantTab: React.FC<GitHubAssistantTabProps> = ({
 }) => {
   const [subTab, setSubTab] = useState<'upload' | 'qr' | 'evidences' | 'readme' | 'prompts' | 'users' | 'video'>('upload');
 
-  // QR Code generator state
-  const [githubUrl, setGithubUrl] = useState<string>('https://carlosseguridadelectronica.github.io/recibo-claro/');
+  // GitHub user & repo customization state
+  const [githubUsername, setGithubUsername] = useState<string>(() => {
+    return localStorage.getItem('reciboclaro_gh_user') || 'giova2023';
+  });
+  const [repoName, setRepoName] = useState<string>(() => {
+    return localStorage.getItem('reciboclaro_gh_repo') || 'recibo-claro';
+  });
+
+  const cleanUser = githubUsername.trim() || 'giova2023';
+  const cleanRepo = repoName.trim() || 'recibo-claro';
+  const githubUrl = `https://${cleanUser}.github.io/${cleanRepo}/`;
+  const githubRepoUrl = `https://github.com/${cleanUser}/${cleanRepo}`;
+
   const qrCanvasRef = useRef<HTMLCanvasElement | null>(null);
+
+  // Update localStorage when username/repo change
+  const handleUsernameChange = (newVal: string) => {
+    setGithubUsername(newVal);
+    localStorage.setItem('reciboclaro_gh_user', newVal);
+  };
+
+  const handleRepoNameChange = (newVal: string) => {
+    setRepoName(newVal);
+    localStorage.setItem('reciboclaro_gh_repo', newVal);
+  };
 
   // Copy feedback state
   const [copiedSection, setCopiedSection] = useState<string | null>(null);
@@ -326,6 +348,57 @@ Commit: 5c6d7e8 - feat(M5): pestana de ahorro energetico y motor de recomendacio
         </div>
       </div>
 
+      {/* GITHUB USERNAME & REPO CUSTOMIZATION BAR */}
+      <div className="bg-white p-3.5 sm:p-4 rounded-2xl border-2 border-amber-300 shadow-xs space-y-2">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div className="flex items-center space-x-2">
+            <span className="bg-amber-100 text-amber-800 p-1.5 rounded-lg text-sm">👤</span>
+            <div>
+              <h4 className="font-bold text-xs sm:text-sm text-slate-800">
+                Personalizá tu Usuario de GitHub:
+              </h4>
+              <p className="text-[11px] text-slate-500">
+                Escribí acá tu usuario real de GitHub. Se actualizarán automáticamente el QR, el README y los comandos de Git al instante.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-2 text-xs">
+            <span className="text-slate-400 text-[11px]">Tu URL de Pages:</span>
+            <code className="bg-slate-100 text-amber-800 font-bold px-2 py-1 rounded text-[11px] border border-slate-200 truncate max-w-[280px]">
+              {githubUrl}
+            </code>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+          <div>
+            <label className="text-[11px] font-bold text-slate-700 block mb-1">
+              Tu Nombre de Usuario en GitHub:
+            </label>
+            <input
+              type="text"
+              value={githubUsername}
+              onChange={(e) => handleUsernameChange(e.target.value)}
+              placeholder="Ej. carlos-dev, juanperez..."
+              className="w-full px-3 py-1.5 text-xs font-semibold border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 text-slate-800 bg-amber-50/40"
+            />
+          </div>
+
+          <div>
+            <label className="text-[11px] font-bold text-slate-700 block mb-1">
+              Nombre del Repositorio:
+            </label>
+            <input
+              type="text"
+              value={repoName}
+              onChange={(e) => handleRepoNameChange(e.target.value)}
+              placeholder="recibo-claro"
+              className="w-full px-3 py-1.5 text-xs font-semibold border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 text-slate-800"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* SUB-NAV BUTTONS */}
       <div className="flex items-center space-x-1.5 sm:space-x-2 overflow-x-auto pb-1 no-scrollbar border-b border-slate-200">
         <button
@@ -579,7 +652,7 @@ Commit: 5c6d7e8 - feat(M5): pestana de ahorro energetico y motor de recomendacio
                       En unos minutos verás tu enlace activo:
                       <br />
                       <code className="bg-emerald-100 font-bold px-2 py-0.5 rounded text-emerald-950 inline-block mt-1">
-                        https://carlosseguridadelectronica.github.io/recibo-claro/
+                        {githubUrl}
                       </code>
                     </p>
                   </div>
@@ -602,7 +675,7 @@ Commit: 5c6d7e8 - feat(M5): pestana de ahorro energetico y motor de recomendacio
                   <p className="text-slate-400"># 4. Asegurar rama principal main</p>
                   <p>git branch -M main</p>
                   <p className="text-slate-400"># 5. Conectar a tu repositorio remoto de GitHub</p>
-                  <p>git remote add origin https://github.com/TU_USUARIO/recibo-claro.git</p>
+                  <p>git remote add origin https://github.com/{cleanUser}/{cleanRepo}.git</p>
                   <p className="text-slate-400"># 6. Subir archivos</p>
                   <p>git push -u origin main</p>
                 </div>
@@ -620,28 +693,22 @@ Commit: 5c6d7e8 - feat(M5): pestana de ahorro energetico y motor de recomendacio
               Generador Oficial de Código QR (<code className="text-amber-700">evidencias/qr.png</code>)
             </h3>
             <p className="text-xs text-slate-500 mt-0.5">
-              Pega la URL de tu GitHub Pages aquí. La app generará el código QR en tiempo real listo para descargar con el nombre exacto pedido por el docente.
+              Genera en tiempo real el código QR de tu URL de GitHub Pages listo para descargar con el nombre exacto pedido por el docente.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             {/* Form */}
             <div className="space-y-4 text-xs">
-              <div>
-                <label className="font-bold text-slate-700 block mb-1">
-                  Tu URL de GitHub Pages:
+              <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                <label className="font-bold text-slate-700 block">
+                  URL Actual Configurada:
                 </label>
-                <div className="flex space-x-2">
-                  <input
-                    type="url"
-                    value={githubUrl}
-                    onChange={(e) => setGithubUrl(e.target.value)}
-                    placeholder="https://tuusuario.github.io/recibo-claro/"
-                    className="w-full px-3 py-2 text-xs border border-slate-300 rounded-xl font-medium focus:ring-2 focus:ring-amber-500"
-                  />
+                <div className="bg-white p-2 rounded-lg border border-slate-200 font-mono text-amber-900 font-bold break-all">
+                  {githubUrl}
                 </div>
-                <p className="text-[11px] text-slate-400 mt-1">
-                  Ejemplo: <code>https://carlosseguridadelectronica.github.io/recibo-claro/</code>
+                <p className="text-[11px] text-slate-500">
+                  Podés cambiar tu usuario o nombre de repositorio en el panel superior <strong>«Personalizá tu Usuario de GitHub»</strong> y este QR se recalculará automáticamente.
                 </p>
               </div>
 

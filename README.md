@@ -12,7 +12,7 @@
 ---
 
 ## 2. Enlace a la App Desplegada y Código QR
-- **URL Oficial en GitHub Pages:** [https://carlosseguridadelectronica.github.io/recibo-claro/](https://carlosseguridadelectronica.github.io/recibo-claro/)
+- **URL Oficial en GitHub Pages:** [https://giova2023.github.io/recibo-claro/](https://giova2023.github.io/recibo-claro/)
 - **Código QR de Acceso Móvil Directo:**
 
 <p align="center">
@@ -54,7 +54,7 @@
 ### Opción B: Ejecución en entorno de desarrollo Node.js
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/carlosseguridadelectronica/recibo-claro.git
+git clone https://github.com/giova2023/recibo-claro.git
 
 # 2. Entrar a la carpeta
 cd recibo-claro
