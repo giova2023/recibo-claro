@@ -1,0 +1,6 @@
+{
+  "name": "ReciboClaro - Calculadora de Consumo Eléctrico (Ejercicio 35 - 3DS-A)",
+  "description": "Calculadora de consumo eléctrico, simulador de recibo de luz, comparador de tarifas, pestaña de ahorro energético y kit completo de entrega GitHub (README, PROMPTS, QR y evidencias).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
