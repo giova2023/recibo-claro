@@ -135,18 +135,14 @@ recibo-claro/
 ├── README.md                  # Documentación oficial con las 13 partes
 ├── PROMPTS.md                 # Bitácora detallada de prompts e iteraciones
 ├── .gitignore                 # Exclusión de archivos sensibles y temporales
-└── evidencias/                # Directorio obligatorio de capturas
-    ├── qr.png                 # Código QR oficial hacia la URL de GitHub Pages
-    ├── E0-inicial.png         # Aplicación recién abierta sin modificaciones
-    ├── E1-antes.png           # Escenario base sin comparativa activa
-    ├── E1-despues.png         # Comparativa de escenarios funcionando
-    ├── E2-antes.png           # Aplicación con datos personalizados cargados
-    ├── E2-despues.png         # Recarga de pestaña demostrando persistencia en LocalStorage
-    ├── E3-celular.png         # Ejecución real en dispositivo móvil
-    ├── E3-vacio.png           # Estado vacío («No hay aparatos registrados»)
-    ├── E4-error.png           # Mensaje de error bloqueante al ingresar > 24 horas
-    ├── E5-app.png             # Pestaña de Ahorro y Recomendaciones activa
-    └── E5-falla.png           # Banner demostrando contingencia offline / fallback local
+└── evidencias/                # Directorio obligatorio de capturas y evidencias
+    ├── README.md              # Documentación detallada con visualización de evidencias
+    ├── qr.png                 # Código QR oficial hacia https://giova2023.github.io/recibo-claro/
+    ├── e1_calculadora.svg     # E1: Calculadora con cálculo de kWh y pesos en tiempo real
+    ├── e2_comparador.svg      # E2: Comparador de escenarios (Antes vs Después con ahorro)
+    ├── e3_ahorro.svg          # E3: Pestaña de ahorro energético con consejos heurísticos
+    ├── e4_validacion_error.svg # E4: Validación de error bloqueante al ingresar >24 horas
+    └── e5_usuarios.svg        # E5: Pruebas con 3 usuarios reales y criterios SUS
 ```
 
 ---

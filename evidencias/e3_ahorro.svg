@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" style="background:#f8fafc; font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">
+    <!-- Window Bar -->
+    <rect width="1000" height="42" fill="#1e293b"/>
+    <circle cx="24" cy="21" r="6" fill="#ef4444"/>
+    <circle cx="44" cy="21" r="6" fill="#f59e0b"/>
+    <circle cx="64" cy="21" r="6" fill="#10b981"/>
+    <text x="500" y="26" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="500">ReciboClaro · giova2023.github.io/recibo-claro · Ejercicio 35 (3DS-A)</text>
+    
+    <!-- App Header -->
+    <rect y="42" width="1000" height="70" fill="url(#gradHeader)"/>
+    <defs>
+      <linearGradient id="gradHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#f59e0b"/>
+        <stop offset="50%" stop-color="#d97706"/>
+        <stop offset="100%" stop-color="#ea580c"/>
+      </linearGradient>
+    </defs>
+    <text x="32" y="85" fill="#ffffff" font-size="24" font-weight="bold">⚡ ReciboClaro</text>
+    <text x="32" y="103" fill="#fef3c7" font-size="12">Calculadora de Consumo Eléctrico y Ahorro · Práctica 1 3DS-A</text>
+    
+    <!-- Rubric Badge -->
+    <rect x="730" y="58" width="238" height="36" rx="18" fill="rgba(255,255,255,0.2)"/>
+    <text x="849" y="81" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600">EVIDENCIA 3 · RECOMENDACIONES</text>
+    
+    <!-- Title banner -->
+    <rect x="32" y="128" width="936" height="50" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="50" y="158" fill="#0f172a" font-size="18" font-weight="bold">E3: Pestaña de Ahorro y Recomendaciones Inteligentes</text>
+    <text x="50" y="174" fill="#64748b" font-size="12">Consejos heurísticos clasificados por electrodoméstico de mayor impacto en la factura</text>
+    
+    <!-- Body Content -->
+    
+  <rect x="32" y="194" width="936" height="110" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="56" y="228" fill="#0f172a" font-size="16" font-weight="bold">❄️ Climatización: Regular Aire a 24°C</text>
+  <text x="56" y="254" fill="#475569" font-size="13">Subir el termostato de 22°C a 24°C reduce el consumo del compresor entre un 7% y 8% por cada grado.</text>
+  <text x="56" y="280" fill="#059669" font-size="12" font-weight="bold">Impacto estimado: Ahorro de 30 kWh/mes (~$3.600 mensuales en tu factura actual).</text>
+  
+  <rect x="32" y="320" width="936" height="110" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="56" y="354" fill="#0f172a" font-size="16" font-weight="bold">🔌 Eliminar Consumos Vampiro / Standby</text>
+  <text x="56" y="380" fill="#475569" font-size="13">Televisores, decodificadores y cargadores enchufados consumen entre 5W y 15W continuos las 24 horas.</text>
+  <text x="56" y="406" fill="#059669" font-size="12" font-weight="bold">Impacto estimado: Ahorro de 18 kWh/mes usando zapatillas con interruptor.</text>
+  
+  <rect x="32" y="446" width="936" height="110" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="56" y="480" fill="#0f172a" font-size="16" font-weight="bold">🧊 Mantenimiento de Heladera y Burletes</text>
+  <text x="56" y="506" fill="#475569" font-size="13">Comprobá el cierre hermético de las puertas y separá la heladera al menos 15 cm de la pared para ventilación del motor.</text>
+  <text x="56" y="532" fill="#059669" font-size="12" font-weight="bold">Impacto estimado: Evita hasta un 15% de consumo extra innecesario.</text>
+
+  </svg>

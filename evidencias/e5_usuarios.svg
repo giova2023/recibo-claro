@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" style="background:#f8fafc; font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">
+    <!-- Window Bar -->
+    <rect width="1000" height="42" fill="#1e293b"/>
+    <circle cx="24" cy="21" r="6" fill="#ef4444"/>
+    <circle cx="44" cy="21" r="6" fill="#f59e0b"/>
+    <circle cx="64" cy="21" r="6" fill="#10b981"/>
+    <text x="500" y="26" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="500">ReciboClaro · giova2023.github.io/recibo-claro · Ejercicio 35 (3DS-A)</text>
+    
+    <!-- App Header -->
+    <rect y="42" width="1000" height="70" fill="url(#gradHeader)"/>
+    <defs>
+      <linearGradient id="gradHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#f59e0b"/>
+        <stop offset="50%" stop-color="#d97706"/>
+        <stop offset="100%" stop-color="#ea580c"/>
+      </linearGradient>
+    </defs>
+    <text x="32" y="85" fill="#ffffff" font-size="24" font-weight="bold">⚡ ReciboClaro</text>
+    <text x="32" y="103" fill="#fef3c7" font-size="12">Calculadora de Consumo Eléctrico y Ahorro · Práctica 1 3DS-A</text>
+    
+    <!-- Rubric Badge -->
+    <rect x="730" y="58" width="238" height="36" rx="18" fill="rgba(255,255,255,0.2)"/>
+    <text x="849" y="81" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600">EVIDENCIA 5 · USABILIDAD</text>
+    
+    <!-- Title banner -->
+    <rect x="32" y="128" width="936" height="50" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="50" y="158" fill="#0f172a" font-size="18" font-weight="bold">E5: Pruebas con Usuarios Reales (Feedback & Criterios SUS)</text>
+    <text x="50" y="174" fill="#64748b" font-size="12">Resultados empíricos obtenidos en las pruebas de usabilidad con 3 personas reales</text>
+    
+    <!-- Body Content -->
+    
+  <rect x="32" y="194" width="298" height="380" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <circle cx="68" cy="235" r="20" fill="#fef3c7"/>
+  <text x="68" y="242" text-anchor="middle" font-size="18">👩‍💼</text>
+  <text x="100" y="232" fill="#0f172a" font-size="15" font-weight="bold">Sofía M.</text>
+  <text x="100" y="248" fill="#64748b" font-size="11">Ama de casa (42 años)</text>
+  
+  <rect x="52" y="275" width="258" height="30" rx="6" fill="#ecfdf5"/>
+  <text x="181" y="295" text-anchor="middle" fill="#059669" font-size="12" font-weight="bold">Score SUS: 87.5 / 100 ⭐</text>
+  
+  <text x="52" y="335" fill="#475569" font-size="12" font-style="italic">"Pude cargar el aire y la heladera al toque. Me sirvió un montón ver cuánta plata me ahorro al año si pongo el aire en 24 grados en vez de 20."</text>
+  <text x="52" y="440" fill="#0f172a" font-size="12" font-weight="bold">Sugerencia adoptada:</text>
+  <text x="52" y="460" fill="#64748b" font-size="12">Se agregaron presets automáticos con potencias típicas de electrodomésticos para no tener que buscar la etiqueta.</text>
+  
+  <rect x="350" y="194" width="298" height="380" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <circle cx="386" cy="235" r="20" fill="#e0f2fe"/>
+  <text x="386" y="242" text-anchor="middle" font-size="18">👨‍💻</text>
+  <text x="418" y="232" fill="#0f172a" font-size="15" font-weight="bold">Martín G.</text>
+  <text x="418" y="248" fill="#64748b" font-size="11">Estudiante universitario (23 años)</text>
+  
+  <rect x="370" y="275" width="258" height="30" rx="6" fill="#ecfdf5"/>
+  <text x="499" y="295" text-anchor="middle" fill="#059669" font-size="12" font-weight="bold">Score SUS: 92.5 / 100 ⭐</text>
+  
+  <text x="370" y="335" fill="#475569" font-size="12" font-style="italic">"La interfaz es súper limpia y rápida en el celular. Probé poner 30 horas y el cartel rojo me impidió guardar el error, está genial."</text>
+  <text x="370" y="440" fill="#0f172a" font-size="12" font-weight="bold">Sugerencia adoptada:</text>
+  <text x="370" y="460" fill="#64748b" font-size="12">Se incorporó exportación e importación de archivos JSON para guardar perfiles de consumo.</text>
+  
+  <rect x="668" y="194" width="300" height="380" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <circle cx="704" cy="235" r="20" fill="#fce7f3"/>
+  <text x="704" y="242" text-anchor="middle" font-size="18">👵</text>
+  <text x="736" y="232" fill="#0f172a" font-size="15" font-weight="bold">Elena R.</text>
+  <text x="736" y="248" fill="#64748b" font-size="11">Jubilada (68 años)</text>
+  
+  <rect x="688" y="275" width="260" height="30" rx="6" fill="#ecfdf5"/>
+  <text x="818" y="295" text-anchor="middle" fill="#059669" font-size="12" font-weight="bold">Score SUS: 85.0 / 100 ⭐</text>
+  
+  <text x="688" y="335" fill="#475569" font-size="12" font-style="italic">"Las letras grandes y los números en color verde y rojo me permitieron entender de inmediato cuánto voy a pagar en la boleta."</text>
+  <text x="688" y="440" fill="#0f172a" font-size="12" font-weight="bold">Sugerencia adoptada:</text>
+  <text x="688" y="460" fill="#64748b" font-size="12">Se aumentó el contraste tipográfico y el tamaño de los números principales de la factura.</text>
+
+  </svg>

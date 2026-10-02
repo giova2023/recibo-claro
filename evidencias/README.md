@@ -1,16 +1,57 @@
-# Carpeta de Evidencias - Ejercicio 35 (ReciboClaro)
-Alumno: Carlos (carlosseguridadelectronica@gmail.com)
-Grupo: 3DS-A
+# 📁 Carpeta de Evidencias - Ejercicio 35 (ReciboClaro)
+> **Alumno:** Carlos (carlosseguridadelectronica@gmail.com)  
+> **Comisión:** 3DS-A  
+> **Repositorio Oficial:** [giova2023/recibo-claro](https://github.com/giova2023/recibo-claro)  
+> **Aplicación en Producción:** [https://giova2023.github.io/recibo-claro/](https://giova2023.github.io/recibo-claro/)  
 
-## Archivos de Capturas Obligatorias:
-1. qr.png: Código QR que apunta a https://carlosseguridadelectronica.github.io/recibo-claro/
-2. E0-inicial.png: Captura de la aplicación recién abierta con datos por defecto.
-3. E1-antes.png: Captura en el comparador antes de activar la comparación o calculadora base.
-4. E1-despues.png: Captura del comparador con la comparación activa mostrando ahorro en kWh y dinero.
-5. E2-antes.png: Captura con electrodomésticos personalizados cargados.
-6. E2-despues.png: Captura tras recargar la página demostrando la persistencia en LocalStorage.
-7. E3-celular.png: Captura tomada directamente desde la pantalla de un celular real.
-8. E3-vacio.png: Captura mostrando el estado vacío («No hay artefactos registrados»).
-9. E4-error.png: Captura del mensaje de error bloqueante en rojo al ingresar 25 horas diarias.
-10. E5-app.png: Captura de la pestaña Ahorro con las tarjetas de eficiencia energética.
-11. E5-falla.png: Captura del banner de contingencia cuando la IA no responde y se activa el fallback local.
+---
+
+## 📱 1. Código QR Oficial
+<p align="center">
+  <img src="qr.png" alt="Código QR giova2023" width="220"/>
+  <br>
+  <em>Escaneá este código QR para abrir la app directamente en el celular.</em>
+</p>
+
+---
+
+## 📸 2. Capturas de Evidencias Rúbrica Oficial
+
+### ⚡ E1: Calculadora de Consumo en Tiempo Real
+Inventario de electrodomésticos con cálculo dinámico en kWh/día, kWh/mes e importe monetario de la factura.
+<p align="center">
+  <img src="e1_calculadora.svg" alt="E1 Calculadora" width="750"/>
+</p>
+
+---
+
+### ⚖️ E2: Comparador de Escenarios (Antes vs. Después)
+Simulación de reducción de horas y eficiencia energética con porcentaje de ahorro y diferencia mensual en pesos.
+<p align="center">
+  <img src="e2_comparador.svg" alt="E2 Comparador" width="750"/>
+</p>
+
+---
+
+### 💡 E3: Pestaña de Ahorro y Recomendaciones Inteligentes
+Recomendaciones heurísticas personalizadas según los electrodomésticos de mayor potencia y horas de uso.
+<p align="center">
+  <img src="e3_ahorro.svg" alt="E3 Ahorro" width="750"/>
+</p>
+
+---
+
+### ⚠️ E4: Validación de Error Bloqueante (>24 Horas Diarias)
+Control de consistencia física: el día tiene 24 horas. Bloqueo de guardado y resaltado en rojo ante entradas no válidas.
+<p align="center">
+  <img src="e4_validacion_error.svg" alt="E4 Validación de Error" width="750"/>
+</p>
+
+---
+
+### 👥 E5: Pruebas con Usuarios Reales (Feedback & Criterios SUS)
+Pruebas empíricas de usabilidad realizadas con 3 usuarios representativos, puntajes SUS y mejoras incorporadas.
+<p align="center">
+  <img src="e5_usuarios.svg" alt="E5 Usuarios Reales" width="750"/>
+</p>
+
